@@ -1,0 +1,79 @@
+@page "/verify"
+@inherits VerifyCredentialBase
+
+<div class="row">
+            @if(verificationRequest != null)
+            {  
+                <div class="col-sm-7">
+                    <h3>Verify your identity via Streetcred ID App</h3>
+                    <p>Open your Streetcred ID app and select “scan code”.</p>
+                    <p>Scan the code here to verify to the MedLab you are a person. Once this verification is valid, MedLab can send you credentials.</p>
+                    <div style=" margin-top: 2rem; margin-left: 4rem;">
+                        <h3 style="width: 17rem; text-align:center">Present Proof</h3>
+                        <div class="qr-border">
+                            <QrImage ImageData="@verificationRequest.VerificationRequestUrl"></QrImage>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="text-align: center;">
+                    <img src="assets/Scan_Image.png" width="270">
+                </div>
+            }
+            else if(FormReady)
+            {
+                <div class="col-sm-6">
+                    <h3>Create and Issue a Covid-19 Credential</h3>
+                    <p>Fill in the form and submit</p>
+                </div>
+                <div class="col-sm-6">
+                    <form>
+                        <div class="row">
+                            <input class="input-box" placeholder="Virus" @bind-value="@credentialModel.virus" />
+                        </div>
+                        <div class="row">
+                            <input class="input-box" placeholder="Check Time" @bind-value="@credentialModel.checktime" />
+                        </div>     
+                        <div class="row">
+                            <input class="input-box" placeholder="Checked Location" @bind-value="@credentialModel.checkedlocation" />
+                        </div>  
+                        <div class="row">
+                            <input class="input-box" placeholder="Checked By" @bind-value="@credentialModel.checkedby" />
+                        </div>  
+                        <div class="row">
+                            <input class="input-box" placeholder="Checked Facility" @bind-value="@credentialModel.checkedfacility" />
+                        </div>  
+                        <div class="row">
+                            <input class="input-box" placeholder="Diagnosis Method" @bind-value="@credentialModel.diagnosismethod" />
+                        </div>  
+                        <div class="row">
+                            <input class="input-box" placeholder="Issued" @bind-value="@credentialModel.issued" />
+                        </div>  
+                        <div class="row">
+                            <input class="input-box" placeholder="Expiry" @bind-value="@credentialModel.expiry" />
+                        </div>  
+                        <div class="row">
+                            <button type="sumbit" class="button-blue" @onclick="@(async () => await FormSubmit())"><a href="/verify" class="button-text">Create Credential</a></button>
+                        </div>
+                    </form>
+                </div>
+            }
+            else if(credentialContract != null)
+            {
+                <div class="col-sm-7">
+                    <h3>Accept the credential via Streetcred ID App</h3>
+                    <p>Open your Streetcred ID app and select “scan code”.</p>
+                    <p>Scan the code here and select "Accept" to be issued the MedLab Covid-19 Credential.</p>
+                    <div style=" margin-top: 2rem; margin-left: 4rem;">
+                        <h3 style="width: 17rem; text-align:center">Accept Credential</h3>
+                        <div class="qr-border">
+                                <QrImage ImageData="@credentialContract.OfferUrl"></QrImage>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="text-align: center;">
+                    <img src="assets/Scan_Image.png" width="270">
+                </div>
+            }
+                
+
+  </div>

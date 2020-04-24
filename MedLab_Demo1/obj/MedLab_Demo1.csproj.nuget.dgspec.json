@@ -1,0 +1,87 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj": {}
+  },
+  "projects": {
+    "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj",
+        "projectName": "MedLab_Demo1",
+        "projectPath": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj",
+        "packagesPath": "/Users/jaredrussellworkman/.nuget/packages/",
+        "outputPath": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jaredrussellworkman/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.Rest.ClientRuntime": {
+              "target": "Package",
+              "version": "[2.3.21, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.3.6, )"
+            },
+            "Streetcred.ServiceClients": {
+              "target": "Package",
+              "version": "[1.1.3102, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

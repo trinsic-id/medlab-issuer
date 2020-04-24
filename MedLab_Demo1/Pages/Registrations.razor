@@ -1,0 +1,8 @@
+@inherits RegistrationBase
+
+@if (@Ready)
+{
+    <CascadingValue Name="AgencyServiceClient" Value="@AgencyServiceClient">
+        @ChildContent
+    </CascadingValue>
+}
