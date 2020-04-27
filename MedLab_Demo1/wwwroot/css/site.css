@@ -99,8 +99,8 @@ app {
             }
 
 .content {
-    margin-right: 19rem;
-    margin-left: 19rem;
+    margin-right: 20%;
+    margin-left: 20%;
     margin-top: 3rem;
     background-color:white;
     border-radius: 10px;
@@ -241,6 +241,10 @@ p {
 
     .main .top-row a, .main .top-row .btn-link {
         margin-left: 0;
+    }
+    .content {
+        margin-right: 5%;
+        margin-left: 5%;
     }
 }
 

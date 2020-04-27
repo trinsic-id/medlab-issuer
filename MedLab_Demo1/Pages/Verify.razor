@@ -4,12 +4,12 @@
 <div class="row">
             @if(verificationRequest != null)
             {  
-                <div class="row" style="margin-left:2rem;">
+                <div class="row" style="margin-left:2rem; margin-right:1rem;">
                     <h3>Verify your identity via Streetcred ID App</h3>
                     <p>Open your Streetcred ID app and select “scan code”.</p>
                     <p>Scan the code here to verify to the MedLab you are a person. Once this verification is valid, MedLab can send you credentials.</p>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-xl-6 col-sm-12">
                     <div style=" margin-top: 2rem; margin-left: 2rem;">
                         <h3 style="width: 17rem; text-align:center">Present Proof</h3>
                         <div class="qr-border">
@@ -17,18 +17,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4" style="text-align: center;">
+                <div class="col-xl-4 col-sm-12" style="text-align: center;">
                     <lottie-player src="assets/lottie.json"  background="transparent"  speed="1"  style="width: 350px; height: 350px; margin-top: 1rem; margin-right: 2rem;"  loop  autoplay></lottie-player> 
                 </div>
 
             }
             else if(FormReady)
             {
-                <div class="col-sm-6">
+                <div class="col-xl-6 col-sm-12">
                     <h3>Create and Issue a Covid-19 Credential</h3>
                     <p>Fill in the form and submit</p>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-xl-6 col-sm-12">
                     <form>
                         <div class="row">
                             <input class="input-box" placeholder="Virus" @bind-value="@credentialModel.virus" />
@@ -67,7 +67,7 @@
                     <p>Open your Streetcred ID app and select “scan code”.</p>
                     <p>Scan the code here and select "Accept" to be issued the MedLab Covid-19 Credential.</p>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-xl-6 col-sm-12">
                     <div style=" margin-top: 2rem; margin-left: 2rem;">
                         <h3 style="width: 17rem; text-align:center">Accept Credential</h3>
                         <div class="qr-border">
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4" style="text-align: center;">
+                <div class="col-xl-4 col-sm-12" style="text-align: center;">
                     <lottie-player src="assets/lottie.json"  background="transparent"  speed="1"  style="width: 350px; height: 350px; margin-top: 1rem; margin-right: 2rem;"  loop  autoplay></lottie-player> 
                 </div>
             }            
