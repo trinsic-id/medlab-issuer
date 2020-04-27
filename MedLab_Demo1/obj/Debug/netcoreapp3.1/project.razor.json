@@ -222,55 +222,6 @@
       },
       {
         "Kind": "Components.Component",
-        "Name": "MedLab_Demo1.Pages.Welcome",
-        "AssemblyName": "MedLab_Demo1",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Welcome",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MedLab_Demo1.Pages.Welcome"
-        }
-      },
-      {
-        "Kind": "Components.Component",
-        "Name": "MedLab_Demo1.Pages.Welcome",
-        "AssemblyName": "MedLab_Demo1",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MedLab_Demo1.Pages.Welcome",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "MedLab_Demo1.Pages.Welcome",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "Kind": "Components.Component",
         "Name": "MedLab_Demo1.Pages.Registrations",
         "AssemblyName": "MedLab_Demo1",
         "Documentation": null,
@@ -524,6 +475,55 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "MedLab_Demo1.Pages.Error",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "MedLab_Demo1.Pages.Welcome",
+        "AssemblyName": "MedLab_Demo1",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Welcome",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MedLab_Demo1.Pages.Welcome"
+        }
+      },
+      {
+        "Kind": "Components.Component",
+        "Name": "MedLab_Demo1.Pages.Welcome",
+        "AssemblyName": "MedLab_Demo1",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MedLab_Demo1.Pages.Welcome",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "MedLab_Demo1.Pages.Welcome",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
