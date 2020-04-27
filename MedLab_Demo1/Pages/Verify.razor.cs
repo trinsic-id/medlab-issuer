@@ -53,21 +53,26 @@ namespace MedLab_Demo1.Pages
         }
         protected async Task FormSubmit()
         {
-            credentialContract = await AgencyServiceClient.CreateCredentialAsync( new CredentialOfferParameters{
-                DefinitionId = "QfuwopKZiKRhJaRY3YadPu:3:CL:15913:default",
-                AutomaticIssuance = true,
-                CredentialValues = new Dictionary<string,string>{
-                {"virus", credentialModel.virus},
-                {"checktime", credentialModel.checktime},
-                {"checkedlocation", credentialModel.checkedlocation},
-                {"checkedby", credentialModel.checkedby},
-                {"checkedfacility", credentialModel.checkedfacility},
-                {"diagnosismethod", credentialModel.diagnosismethod},
-                {"issued", credentialModel.issued},
-                {"expiry", credentialModel.expiry}
-                }
-            });  
-            FormReady = false;
+            try{
+                credentialContract = await AgencyServiceClient.CreateCredentialAsync( new CredentialOfferParameters{
+                    DefinitionId = "QfuwopKZiKRhJaRY3YadPu:3:CL:15913:default",
+                    AutomaticIssuance = true,
+                    CredentialValues = new Dictionary<string,string>{
+                    {"virus", credentialModel.virus},
+                    {"checktime", credentialModel.checktime},
+                    {"checkedlocation", credentialModel.checkedlocation},
+                    {"checkedby", credentialModel.checkedby},
+                    {"checkedfacility", credentialModel.checkedfacility},
+                    {"diagnosismethod", credentialModel.diagnosismethod},
+                    {"issued", credentialModel.issued},
+                    {"expiry", credentialModel.expiry}
+                    }
+                });  
+                FormReady = false;
+            }catch(System.Exception e)
+            {
+                var err = e;
+            }
             StateHasChanged();
         }
         
