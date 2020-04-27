@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Streetcred.ServiceClients;
 using Streetcred.ServiceClients.Models;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;
@@ -19,14 +20,19 @@ namespace MedLab_Demo1.Pages
     {
         public List<ConnectionContract> connections = new List<ConnectionContract>();
         [CascadingParameter(Name = "AgencyServiceClient")] public IAgencyServiceClient AgencyServiceClient { get; set; }
+        [Inject] IJSRuntime JSRuntime {get; set;}
         public VerificationContract verificationRequest;
         public VerificationContract verificationResponse;
         public CredentialContract credentialContract;
         public CredentialModel credentialModel = new CredentialModel();
         public bool FormReady = false;
-
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            await JSRuntime.InvokeAsync<bool>("GetScanLottie");
+        }
         protected async override Task OnInitializedAsync()
-        {          
+        {     
+
             try{
                 // Get a QR for the verification
                 verificationRequest = await AgencyServiceClient.CreateVerificationFromPolicyAsync("ab6adaa7-4d2d-4b6d-5a09-08d7e7b71754");
