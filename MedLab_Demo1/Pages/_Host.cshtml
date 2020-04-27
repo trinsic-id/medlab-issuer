@@ -4,7 +4,6 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
     <title>MedLab_Demo1</title>
     <base href="~/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" /> 
 </head>
 <body>
     <app>
@@ -31,6 +30,9 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="_framework/blazor.server.js"></script>
-</body>
+    <script src="js/init.js"></script>
+    <script src=@("https://unpkg.com/@" + "lottiefiles/lottie-player@latest/dist/lottie-player.js")></script>
+</body> 
 </html>

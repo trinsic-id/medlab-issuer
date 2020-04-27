@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lpz73LjGic3yFKjunTW2y991TbQhKelG1F9pQkRsdRkR3oH9V/+MTsm8/IYNiK/OdNi6jZHb4O04QyVcos2Yeg==",
+  "dgSpecHash": "NQFOkCrioTk70fb+PwvMkMHYK9GaYZqEgu5deR6jhaZnzymz0aQArb1vKa6kFxBOr5NZfH5Va9qs64n33L7Udw==",
   "success": true,
-  "projectFilePath": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj",
+  "projectFilePath": "/Users/jaredrussellworkman/StreetCred/April2/medlab-issuer/MedLab_Demo1/MedLab_Demo1.csproj",
   "expectedPackageFiles": [
     "/Users/jaredrussellworkman/.nuget/packages/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",
     "/Users/jaredrussellworkman/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.1.3/microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512",

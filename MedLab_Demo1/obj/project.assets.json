@@ -5465,11 +5465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj",
+      "projectUniqueName": "/Users/jaredrussellworkman/StreetCred/April2/medlab-issuer/MedLab_Demo1/MedLab_Demo1.csproj",
       "projectName": "MedLab_Demo1",
-      "projectPath": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/MedLab_Demo1.csproj",
+      "projectPath": "/Users/jaredrussellworkman/StreetCred/April2/medlab-issuer/MedLab_Demo1/MedLab_Demo1.csproj",
       "packagesPath": "/Users/jaredrussellworkman/.nuget/packages/",
-      "outputPath": "/Users/jaredrussellworkman/Projects/MedLab_Demo1/MedLab_Demo1/obj/",
+      "outputPath": "/Users/jaredrussellworkman/StreetCred/April2/medlab-issuer/MedLab_Demo1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jaredrussellworkman/.nuget/NuGet/NuGet.Config"
