@@ -5,13 +5,21 @@
             @if(verificationRequest != null)
             {  
                 <div class="row" style="margin-left:2rem; margin-right:1rem;">
-                    <h3>Verify your identity via Streetcred ID App</h3>
-                    <p>Open your Streetcred ID app and select “scan code”.</p>
-                    <p>Scan the code here to verify to the MedLab you are a person. Once this verification is valid, MedLab can send you credentials.</p>
+                    <h3>Get Verified</h3>
+                    <p>In order to provide you a COVID-19 test result credential, we'd like to verify the following things.</p>
+                    <ul>
+                        <li>
+                            BC Personal Health Number (phn)
+                        </li>
+                        <li>
+                            Essential Service (essential)
+                        </li>
+                    </ul>
+                    <p>Please scan the following QR code with your digital wallet</p>
                 </div>
                 <div class="col-xl-6 col-sm-12">
                     <div style=" margin-top: 2rem; margin-left: 2rem;">
-                        <h3 style="width: 17rem; text-align:center">Present Proof</h3>
+                        <h3 style="width: 17rem; text-align:center">Scan this Code</h3>
                         <div class="qr-border">
                             <QrImage ImageData="@verificationRequest.VerificationRequestUrl"></QrImage>
                         </div>
@@ -25,51 +33,58 @@
             else if(FormReady)
             {
                 <div class="col-xl-6 col-sm-12">
-                    <h3>Create and Issue a Covid-19 Credential</h3>
-                    <p>Fill in the form and submit</p>
+                    <h3>Test Results</h3>
+                    <p>These are the results of your COVID-19 test. Please click the button below to confirm.</p>
+                    <div class="row" style="margin-left:15px;">
+                        <button type="sumbit" class="button-blue" @onclick="@(async () => await FormSubmit())"><a href="/verify" class="button-text">Confirm</a></button>
+                    </div>
                 </div>
                 <div class="col-xl-6 col-sm-12">
                     <form>
                         <div class="row">
-                            <input class="input-box" placeholder="Virus" @bind-value="@credentialModel.virus" />
+                            <label class="col-sm-12 label-box">Virus</label>
+                            <input class="input-box" placeholder="Virus" @bind-value="@credentialModel.virus" readonly/>
                         </div>
                         <div class="row">
-                            <input class="input-box" placeholder="Check Time" @bind-value="@credentialModel.checktime" />
+                            <label class="col-sm-12 label-box">Check Time</label>
+                            <input class="input-box" placeholder="Check Time" @bind-value="@credentialModel.checktime" readonly/>
                         </div>     
                         <div class="row">
-                            <input class="input-box" placeholder="Checked Location" @bind-value="@credentialModel.checkedlocation" />
+                            <label class="col-sm-12 label-box">Checked Location</label>
+                            <input class="input-box" placeholder="Checked Location" @bind-value="@credentialModel.checkedlocation" readonly/>
                         </div>  
                         <div class="row">
-                            <input class="input-box" placeholder="Checked By" @bind-value="@credentialModel.checkedby" />
+                            <label class="col-sm-12 label-box">Checked By</label>
+                            <input class="input-box" placeholder="Checked By" @bind-value="@credentialModel.checkedby" readonly/>
                         </div>  
                         <div class="row">
-                            <input class="input-box" placeholder="Checked Facility" @bind-value="@credentialModel.checkedfacility" />
+                            <label class="col-sm-12 label-box">Checked Facility</label>
+                            <input class="input-box" placeholder="Checked Facility" @bind-value="@credentialModel.checkedfacility" readonly/>
                         </div>  
                         <div class="row">
-                            <input class="input-box" placeholder="Diagnosis Method" @bind-value="@credentialModel.diagnosismethod" />
+                            <label class="col-sm-12 label-box">Diagnosis Method</label>
+                            <input class="input-box" placeholder="Diagnosis Method" @bind-value="@credentialModel.diagnosismethod" readonly/>
                         </div>  
                         <div class="row">
-                            <input class="input-box" placeholder="Issued" @bind-value="@credentialModel.issued" />
+                            <label class="col-sm-12 label-box">Issued</label>
+                            <input class="input-box" placeholder="Issued" @bind-value="@credentialModel.issued" readonly/>
                         </div>  
-                        <div class="row">
-                            <input class="input-box" placeholder="Expiry" @bind-value="@credentialModel.expiry" />
+                        <div class="row" style="padding-bottom: 20px;">
+                            <label class="col-sm-12 label-box">Expiry</label>
+                            <input class="input-box" placeholder="Expiry" @bind-value="@credentialModel.expiry" readonly/>
                         </div>  
-                        <div class="row">
-                            <button type="sumbit" class="button-blue" @onclick="@(async () => await FormSubmit())"><a href="/verify" class="button-text">Create Credential</a></button>
-                        </div>
                     </form>
                 </div>
             }
             else if(credentialContract != null)
             {
                 <div class="row" style="margin-left:2rem;">
-                    <h3>Accept the credential via Streetcred ID App</h3>
-                    <p>Open your Streetcred ID app and select “scan code”.</p>
-                    <p>Scan the code here and select "Accept" to be issued the MedLab Covid-19 Credential.</p>
+                    <h3>Get Credential</h3>
+                    <p>Please scan the following QR code with your digital wallet to get the results of the test as a verifiable credential in your wallet.</p>
                 </div>
                 <div class="col-xl-6 col-sm-12">
                     <div style=" margin-top: 2rem; margin-left: 2rem;">
-                        <h3 style="width: 17rem; text-align:center">Accept Credential</h3>
+                        <h3 style="width: 17rem; text-align:center">Scan this code</h3>
                         <div class="qr-border">
                                 <QrImage ImageData="@credentialContract.OfferUrl"></QrImage>
                         </div>

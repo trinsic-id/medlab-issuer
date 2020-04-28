@@ -36,6 +36,16 @@ app {
         background-color: white;
         border-bottom: 1px solid #d6d5d5;
     }
+    .main .bottom-row {
+        margin-top:20px;
+        background: transparent;
+        border-bottom: 1px solid #d6d5d5;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: right;
+    }
 
         .main .top-row > a, .main .top-row .btn-link {
             white-space: nowrap;
@@ -230,6 +240,12 @@ p {
     box-sizing: border-box;
     border-radius: 3px;
 }
+.label-box {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-weight: 500;
+}
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -247,6 +263,7 @@ p {
         margin-left: 5%;
     }
 }
+
 
 @media (min-width: 768px) {
     app {
