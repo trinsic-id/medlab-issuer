@@ -73,6 +73,10 @@ namespace MedLab_Demo1.Pages
             {
                 var err = e;
             }
+            if(FormReady)
+            {
+                
+            }
             StateHasChanged();
         }
         
