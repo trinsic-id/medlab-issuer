@@ -38,7 +38,7 @@ namespace MedLab_Demo1.Pages
                 verificationRequest = await AgencyServiceClient.CreateVerificationFromPolicyAsync("ab6adaa7-4d2d-4b6d-5a09-08d7e7b71754");
                 StateHasChanged();
                 verificationResponse = await Polly.Policy.HandleResult<VerificationContract>(r => r.IsValid != true)
-                .WaitAndRetryAsync(20, _ => TimeSpan.FromSeconds(4))
+                .WaitAndRetryAsync(100, _ => TimeSpan.FromSeconds(4))
                 .ExecuteAsync(async () => await AgencyServiceClient.GetVerificationAsync(verificationRequest.VerificationId));
                 if(verificationResponse.IsValid == true)
                 {
